@@ -28,7 +28,7 @@ print("Cargando datos del archivo...")
         #'datos_superficies_opticas 6.npz2.npz'
 nfile = Path(__file__).parent.parent / 'data' / 'optical_coefficients.npz'
 datos = np.load(nfile)
-if nfile.find('npz2')<0:        # Se trata de superficie con base (ASIM, d)
+if str(nfile).find('npz2')<0:        # Se trata de superficie con base (ASIM, d)
     print('superficie (ASIM, d) identificada')
     lb_x = r'$\mathrm{\gamma}$'; 
     lb_y = '$d$ (Å)'
