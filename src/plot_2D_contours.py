@@ -9,8 +9,13 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
+from   pathlib import Path
 Ry   = 5.8341           #Constante de Rydberg en meV ($\epsilon_r$ = 12.5). Ry = 5.24 para $\epsilon_r$ = 13.18 
 a0   = 98.72030089;     #Radio de Bohr 'reducido' en Angstrom
+# Define la ruta absoluta al archivo .npz de forma dinámica
+# __file__ es este script. parent es 'src'. El segundo parent es la raíz del repositorio
+ruta_datos1 = Path(__file__).parent.parent / 'data' / 'energies_and_matrix_elements.npz'
+ruta_datos2 = Path(__file__).parent.parent / 'data' / 'optical_coefficients.npz'
 
 # ==========================================
 # 1. CONFIGURACIÓN DE FUENTES (Nivel JCR)
@@ -31,7 +36,7 @@ plt.rcParams.update({
 # 2. CARGAR LOS DATOS
 # ==========================================
 print("Cargando datos Mij y Eij del archivo .npz ...")
-datos = np.load('energies_and_matrix_elements.npz')
+datos = np.load(ruta_datos1)
 # Extraer mallas espaciales
 gamma = datos['Asim_grid']
 d     = datos['d_grid']
@@ -44,7 +49,7 @@ E20     = datos['E20']
 E30     = datos['E30']
 
 #---- Cargar datos de los Coeficientes de archivo .npz
-data = np.load('optical_coefficients.npz')
+data = np.load(ruta_datos2)
 NOR = data['MAX_NOR']
 SHG = data['MAX_SHG']
 THG = data['MAX_THG']
