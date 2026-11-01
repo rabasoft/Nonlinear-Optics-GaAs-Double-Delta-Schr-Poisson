@@ -38,6 +38,7 @@ To generate a specific set of plots:
 4. Run the script:
 ```bash
 python plot_2D_contours.py
+python plot_3D_surfaces.py
 ```
 
 # Citation
@@ -45,3 +46,9 @@ python plot_2D_contours.py
 If you use these datasets or visualization scripts, please cite:
 
 Rabanales-Marquez, E., Gaggero-Sager, L. M., Noverola-Gamas, H., & Oubram, O. (2026). A Self-consistent Schrödinger-Poisson Study of the Maximum Nonlinear Optical Responses in Double $\delta$-doped GaAs Structures Tuned by Asymmetry and Layer Separation. Computational Materials Science (Under Review).
+
+# Authors
+* Eddy Rabanales-Marquez (Universidad Autónoma del Estado de Morelos / Universidad Juárez Autónoma de Tabasco)
+* Luis Manuel Gaggero-Sager (Universidad Autónoma del Estado de Morelos)
+* Humberto Noverola-Gamas (Universidad Juárez Autónoma de Tabasco)
+* Outmane Oubram (Universidad Autónoma del Estado de Morelos)
