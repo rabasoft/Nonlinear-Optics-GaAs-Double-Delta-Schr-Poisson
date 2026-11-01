@@ -22,6 +22,7 @@ This repository shares the direct output datasets from the self-consistent Schr√
 To run the visualization scripts, you need Python 3 and the following libraries:
 * `numpy`
 * `matplotlib`
+* `pathlib`
 
 Install them via:
 ```bash
