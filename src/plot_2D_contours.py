@@ -31,11 +31,11 @@ plt.rcParams.update({
 # 2. CARGAR LOS DATOS
 # ==========================================
 print("Cargando datos Mij y Eij del archivo .npz ...")
-datos = np.load('datos_Mij_Eij_opticos 00.npz')
+datos = np.load('energies_and_matrix_elements.npz')
 # Extraer mallas espaciales
 gamma = datos['Asim_grid']
 d     = datos['d_grid']
-# Extraer matrices (Usaremos NOR como ejemplo de la narrativa)
+# Extraer matrices
 Mij_NOR = np.abs(datos['Mij_NOR'])
 Mij_SHG = np.abs(datos['Mij_SHG'])
 Mij_THG = np.abs(datos['Mij_THG'])
@@ -44,13 +44,10 @@ E20     = datos['E20']
 E30     = datos['E30']
 
 #---- Cargar datos de los Coeficientes de archivo .npz
-data = np.load('datos_superficies_opticas 200nm 6.npz')
+data = np.load('optical_coefficients.npz')
 NOR = data['MAX_NOR']
 SHG = data['MAX_SHG']
 THG = data['MAX_THG']
-
-# Simular el Coeficiente Total (Sustituye esto por tu matriz de NOR total si la tienes, 
-# o el producto físico que define la amplitud del coeficiente en tus ecuaciones)
 
 # ==========================================
 # 3. FUNCIÓN PARA MARCAR LA REGIÓN >80%
@@ -93,7 +90,7 @@ agregar_region_optima(ax1, Area_NOR)
 cbar1 = fig.colorbar(cp1, ax=ax1, **cbar_kwargs)
 vmin, vmax = cp1.get_clim();      vmid = (vmin + vmax) / 2.0
 cbar1.set_ticks([vmin, vmid, vmax], labels=[f'{vmin:.2f}', f'{vmid:.2f}', f'{vmax:.2f}'])
-cbar1.ax.tick_params(labelsize=15) # Tamaño de fuente ligeramente menor para que los números quepan bien
+cbar1.ax.tick_params(labelsize=15) 
 
 # --- PANEL B: Energía de Subbanda ---
 cp2 = ax2.contourf(gamma, d, E10*Ry, levels=50, cmap=cmap_choice) # Usamos plasma para diferenciar energías
@@ -133,7 +130,7 @@ agregar_region_optima(ax1, Area_SHG)
 cbar1 = fig.colorbar(cp1, ax=ax1, **cbar_kwargs)
 vmin, vmax = cp1.get_clim();      vmid = (vmin + vmax) / 2.0
 cbar1.set_ticks([vmin, vmid, vmax], labels=[f'{vmin:.2f}', f'{vmid:.2f}', f'{vmax:.2f}'])
-cbar1.ax.tick_params(labelsize=15) # Tamaño de fuente ligeramente menor para que los números quepan bien
+cbar1.ax.tick_params(labelsize=15)
 
 # --- PANEL B: Energía de Subbanda ---
 cp2 = ax2.contourf(gamma, d, E10*Ry, levels=50, cmap=cmap_choice) # Usamos plasma para diferenciar energías
@@ -173,7 +170,7 @@ agregar_region_optima(ax1, Area_THG)
 cbar1 = fig.colorbar(cp1, ax=ax1, **cbar_kwargs)
 vmin, vmax = cp1.get_clim();      vmid = (vmin + vmax) / 2.0
 cbar1.set_ticks([vmin, vmid, vmax], labels=[f'{vmin:.2f}', f'{vmid:.2f}', f'{vmax:.2f}'])
-cbar1.ax.tick_params(labelsize=15) # Tamaño de fuente ligeramente menor para que los números quepan bien
+cbar1.ax.tick_params(labelsize=15) 
 
 # --- PANEL B: Energía de Subbanda ---
 cp2 = ax2.contourf(gamma, d, E30*Ry, levels=50, cmap=cmap_choice) # Usamos plasma para diferenciar energías
