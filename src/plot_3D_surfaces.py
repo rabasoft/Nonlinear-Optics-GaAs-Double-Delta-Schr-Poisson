@@ -9,6 +9,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 from matplotlib.ticker import FuncFormatter
+from pathlib import Path
 #=================================================================================
 def dibuja_region(x_min, x_max, y_min, y_max, ax):
    # Coordenadas de los vértices del rectángulo (el último punto cierra el ciclo)
@@ -25,7 +26,7 @@ print("Cargando datos del archivo...")
         #'datos_superficies_opticas 200 nm 4.npz'
         #'datos_superficies_opticas 200nm 5.npz'
         #'datos_superficies_opticas 6.npz2.npz'
-nfile = 'optical_coefficients.npz'
+nfile = Path(__file__).parent.parent / 'data' / 'optical_coefficients.npz'
 datos = np.load(nfile)
 if nfile.find('npz2')<0:        # Se trata de superficie con base (ASIM, d)
     print('superficie (ASIM, d) identificada')
