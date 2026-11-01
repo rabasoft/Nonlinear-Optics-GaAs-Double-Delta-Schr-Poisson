@@ -1,7 +1,7 @@
 # Nonlinear-Optics-GaAs-Double-Delta-Schrödinger-Poisson
 Python 2D contour maps for self-consistent Schrödinger-Poisson equation and nonlinear optical responses in double delta-doped GaAs structures.
-# Data and Visualization Scripts: Nonlinear Optical Responses in Double $\delta$-doped GaAs Structures
 
+# Data and Visualization Scripts: Nonlinear Optical Responses in Double $\delta$-doped GaAs Structures
 This repository contains the numerical datasets and Python visualization scripts associated with the manuscript: 
 **"A Self-consistent Schrödinger-Poisson Study of the Maximum Nonlinear Optical Responses in Double $\delta$-doped GaAs Structures Tuned by Asymmetry and Layer Separation"** (Submitted to *Computational Materials Science*).
 
@@ -26,3 +26,22 @@ To run the visualization scripts, you need Python 3 and the following libraries:
 Install them via:
 ```bash
 pip install numpy matplotlib
+```
+
+# How to Run the Scripts
+
+Both plot_2D_contours.py and plot_3D_surfaces.py are internally structured into three independent blocks, one for each optical coefficient group (NOR, SHG, and THG). Each block handles the plotting of the specific coefficient alongside its corresponding $E_{ij}$ and $M_{ij}$ maps.
+To generate a specific set of plots:
+1. Open the script (plot_2D_contours.py or plot_3D_surfaces.py).
+2. Enable (uncomment) the block corresponding to the coefficient you want to visualize (e.g., the NOR block).
+3. Disable (comment out) the code blocks associated with the other two coefficients (e.g., the SHG and THG blocks).
+4. Run the script:
+```bash
+python plot_2D_contours.py
+```
+
+# Citation
+
+If you use these datasets or visualization scripts, please cite:
+
+Rabanales-Marquez, E., Gaggero-Sager, L. M., Noverola-Gamas, H., & Oubram, O. (2026). A Self-consistent Schrödinger-Poisson Study of the Maximum Nonlinear Optical Responses in Double $\delta$-doped GaAs Structures Tuned by Asymmetry and Layer Separation. Computational Materials Science (Under Review).
