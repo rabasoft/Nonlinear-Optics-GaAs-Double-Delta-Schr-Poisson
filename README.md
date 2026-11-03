@@ -26,7 +26,7 @@ To run the visualization scripts, you need Python 3 and the following libraries:
 
 Install them via:
 ```bash
-pip install numpy matplotlib
+pip install numpy matplotlib pathlib
 ```
 
 # How to Run the Scripts
