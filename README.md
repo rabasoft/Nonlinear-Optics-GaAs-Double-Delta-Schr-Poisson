@@ -3,7 +3,7 @@ Python 2D contour maps for self-consistent Schrödinger-Poisson equation and non
 
 # Data and Visualization Scripts: Nonlinear Optical Responses in Double $\delta$-doped GaAs Structures
 This repository contains the numerical datasets and Python visualization scripts associated with the manuscript: 
-**"A Self-consistent Schrödinger-Poisson Study of the Maximum Nonlinear Optical Responses in Double $\delta$-doped GaAs Structures Tuned by Asymmetry and Layer Separation"** (Submitted to *Computational Materials Science*).
+**"A Self-consistent Schrödinger-Poisson Study of the Maximum Nonlinear Optical Responses in Double $\delta$-doped GaAs Structures Tuned by Asymmetry and Layer Separation"** (Submitted to *Physica B: Condensed Matter*).
 
 ## Overview
 This repository shares the direct output datasets from the self-consistent Schrödinger-Poisson calculations and the routines to visualize them. The provided Python scripts generate high-quality 2D contour maps and 3D surface plots for the optical coefficients, subband energy differences, and dipole matrix elements.
@@ -46,7 +46,7 @@ python plot_3D_surfaces.py
 
 If you use these datasets or visualization scripts, please cite:
 
-Rabanales-Marquez, E., Gaggero-Sager, L. M., Noverola-Gamas, H., & Oubram, O. (2026). A Self-consistent Schrödinger-Poisson Study of the Maximum Nonlinear Optical Responses in Double $\delta$-doped GaAs Structures Tuned by Asymmetry and Layer Separation. Computational Materials Science (Under Review).
+Rabanales-Marquez, E., Gaggero-Sager, L. M., Noverola-Gamas, H., & Oubram, O. (2026). A Self-consistent Schrödinger-Poisson Study of the Maximum Nonlinear Optical Responses in Double $\delta$-doped GaAs Structures Tuned by Asymmetry and Layer Separation. Physica B: Condensed Matter (Under Review).
 
 # Authors
 * Eddy Rabanales-Marquez (Universidad Autónoma del Estado de Morelos / Universidad Juárez Autónoma de Tabasco)
